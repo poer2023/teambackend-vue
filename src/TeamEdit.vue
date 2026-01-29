@@ -56,7 +56,8 @@
             <th>团队标语</th>
             <th>域名信息</th>
             <th>最大成员数限制</th>
-            <th>版本</th>
+            <th>团队版本开始时间</th>
+            <th>团队版本到期时间</th>
             <th>操作</th>
           </tr>
         </thead>
@@ -77,7 +78,8 @@
             <td>{{ item.slogan }}</td>
             <td>{{ item.domain }}</td>
             <td>{{ item.maxMembers }}</td>
-            <td>{{ getVersionName(item.versionType) }}</td>
+            <td>{{ item.versionStart }}</td>
+            <td>{{ item.versionEnd }}</td>
             <td>
               <div class="action-btns">
                 <button class="btn btn-link" @click="openEditModal(item)">
@@ -557,7 +559,9 @@ const teamList = ref([
     slogan: 'AI 法律助手',
     domain: 'hyzc.inschool.top',
     maxMembers: 20,
-    versionType: 'legal'
+    versionType: 'legal',
+    versionStart: '2026-01-27 00:00:00',
+    versionEnd: '2026-04-27 00:00:00'
   },
   {
     id: 2,
@@ -570,7 +574,9 @@ const teamList = ref([
     slogan: 'AI科研助手',
     domain: 'shsshgzxh.shexian...',
     maxMembers: 11,
-    versionType: 'research'
+    versionType: 'research',
+    versionStart: '2026-01-26 00:00:00',
+    versionEnd: '2027-01-25 00:00:00'
   },
   {
     id: 3,
@@ -583,7 +589,9 @@ const teamList = ref([
     slogan: '企业AI助手',
     domain: 'dxxzy.inschool.top',
     maxMembers: 10,
-    versionType: 'enterprise'
+    versionType: 'enterprise',
+    versionStart: '2026-01-20 00:00:00',
+    versionEnd: '2026-07-20 00:00:00'
   },
   {
     id: 4,
@@ -596,7 +604,9 @@ const teamList = ref([
     slogan: 'AI科研助手',
     domain: 'dxhxy.inschool.top',
     maxMembers: 10,
-    versionType: 'research'
+    versionType: 'research',
+    versionStart: '2026-01-20 00:00:00',
+    versionEnd: '2026-07-20 00:00:00'
   },
   {
     id: 5,
@@ -609,7 +619,9 @@ const teamList = ref([
     slogan: '团学数字大脑',
     domain: 'susttw.inschool.top',
     maxMembers: 10,
-    versionType: 'shexiang'
+    versionType: 'shexiang',
+    versionStart: '2026-01-20 00:00:00',
+    versionEnd: '2026-03-20 00:00:00'
   },
   {
     id: 6,
@@ -622,7 +634,9 @@ const teamList = ref([
     slogan: 'AI科研助手',
     domain: 'yx.inschool.top',
     maxMembers: 10,
-    versionType: 'research'
+    versionType: 'research',
+    versionStart: '2026-01-20 00:00:00',
+    versionEnd: '2026-03-20 00:00:00'
   },
   {
     id: 7,
@@ -635,7 +649,9 @@ const teamList = ref([
     slogan: '涌见AI科研助手',
     domain: 'mgp.inschool.top',
     maxMembers: 10,
-    versionType: 'research'
+    versionType: 'research',
+    versionStart: '2026-01-16 00:00:00',
+    versionEnd: '2026-03-16 00:00:00'
   },
   {
     id: 8,
@@ -648,7 +664,9 @@ const teamList = ref([
     slogan: '涌见版',
     domain: 'pkulaw.inschool.top',
     maxMembers: 100,
-    versionType: 'legal'
+    versionType: 'legal',
+    versionStart: '2026-01-16 00:00:00',
+    versionEnd: '2026-05-16 00:00:00'
   },
   {
     id: 9,
@@ -661,7 +679,9 @@ const teamList = ref([
     slogan: 'AI法律助手',
     domain: 'law.ahasci.cn',
     maxMembers: 100,
-    versionType: 'legal'
+    versionType: 'legal',
+    versionStart: '2026-01-15 00:00:00',
+    versionEnd: '2027-01-15 00:00:00'
   },
   {
     id: 10,
@@ -673,8 +693,10 @@ const teamList = ref([
     shortName: '淮安金融学会',
     slogan: 'AI科研助手',
     domain: 'hajrxh.inschool.top',
-    maxMembers: 20,
-    versionType: 'enterprise'
+    maxMembers: 7,
+    versionType: 'enterprise',
+    versionStart: '2026-01-28 00:00:00',
+    versionEnd: '2027-01-28 00:00:00'
   }
 ])
 
