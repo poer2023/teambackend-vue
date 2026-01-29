@@ -48,7 +48,7 @@
           <tr>
             <th><input type="checkbox"></th>
             <th>销售信息</th>
-            <th>壳应用</th>
+            <th>版本名</th>
             <th>团队名称</th>
             <th>团队logo URL</th>
             <th>状态(active, inactive)</th>
@@ -64,7 +64,7 @@
           <tr v-for="item in teamList" :key="item.id">
             <td><input type="checkbox"></td>
             <td>{{ item.sales }}</td>
-            <td>{{ item.shellApp }}</td>
+            <td>{{ getVersionName(item.versionType) }}</td>
             <td>{{ item.teamName }}</td>
             <td>
               <span v-if="item.logoUrl" class="logo-preview">
